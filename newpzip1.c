@@ -180,7 +180,7 @@ void *consume(){
 		pthread_mutex_lock(&lock);
 		
 		while(count==0 && done==0){
-		    pthread_cond_signal(&empty);
+		    //pthread_cond_signal(&empty);
 		    pthread_cond_wait(&full,&lock); 
 		}
 		if(done==1 && count==0){ 
